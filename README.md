@@ -1,7 +1,4 @@
-# Subnrt_Calculator
-Professional IPv4 &amp; IPv6 subnet calculator built with pure HTML, CSS, and JavaScript — featuring a warm brown &amp; beige UI, binary representation, address classification, click-to-copy results, and full CIDR support.
-
-# SubnetPro — IPv4 & IPv6 Subnet Calculator
+# Subnet — IPv4 & IPv6 Subnet Calculator
 
 A professional, fully-featured subnet calculator with a warm **brown & beige** design theme. Supports both IPv4 (32-bit) and IPv6 (128-bit) address families in a clean, responsive interface built with pure HTML, CSS, and JavaScript — no frameworks, no dependencies.
 
@@ -147,20 +144,6 @@ Open `styles.css` and edit the root variables:
   --amber:     #c97d2a;  /* progress bar */
 }
 ```
-
-### Update Your Links
-In `index.html`, find the footer and replace the placeholder links:
-```html
-<a href="https://github.com/your-username" class="flink">GitHub</a>
-<a href="https://linkedin.com/in/your-profile" class="flink">LinkedIn</a>
-```
-
-### Add Your Name
-In the footer section:
-```html
-<span class="footer-name">Your Name — SubnetPro</span>
-```
-
 ---
 
 ## Browser Support
@@ -203,9 +186,9 @@ Make sure you are using valid colon-hex notation. Compressed forms like `::1`, `
 
 ## Author
 
-**[Your Name]**
+**[M. Hassaan Majid]**
 - Cisco NetAcad Network Basics Certified
-- GitHub: [Your GitHub Profile URL]
+- GitHub: [https://github.com/ScrambleR-H]
 - LinkedIn: [Your LinkedIn URL]
 
 ---
