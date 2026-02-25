@@ -189,7 +189,7 @@ Make sure you are using valid colon-hex notation. Compressed forms like `::1`, `
 **[M. Hassaan Majid]**
 - Cisco NetAcad Network Basics Certified
 - GitHub: [https://github.com/ScrambleR-H]
-- LinkedIn: [Your LinkedIn URL]
+- LinkedIn: [www.linkedin.com/in/hassaan-majid-7826b13a6]
 
 ---
 
