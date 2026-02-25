@@ -186,7 +186,7 @@ Make sure you are using valid colon-hex notation. Compressed forms like `::1`, `
 
 ## Author
 
-**[ScrambleR]**
+**ScrambleR**
 - Cisco NetAcad Network Basics Certified
 - GitHub: [https://github.com/ScrambleR-H]
 - LinkedIn: [www.linkedin.com/in/scrambler-hhh-7826b13a6]
