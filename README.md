@@ -186,10 +186,10 @@ Make sure you are using valid colon-hex notation. Compressed forms like `::1`, `
 
 ## Author
 
-**[M. Hassaan Majid]**
+**[ScrambleR]**
 - Cisco NetAcad Network Basics Certified
 - GitHub: [https://github.com/ScrambleR-H]
-- LinkedIn: [www.linkedin.com/in/hassaan-majid-7826b13a6]
+- LinkedIn: [www.linkedin.com/in/scrambler-hhh-7826b13a6]
 
 ---
 
