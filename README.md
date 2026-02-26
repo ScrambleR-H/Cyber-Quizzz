@@ -1,198 +1,152 @@
-# Subnet — IPv4 & IPv6 Subnet Calculator
+# CyberQuiz — Cybersecurity Awareness Challenge
 
-A professional, fully-featured subnet calculator with a warm **brown & beige** design theme. Supports both IPv4 (32-bit) and IPv6 (128-bit) address families in a clean, responsive interface built with pure HTML, CSS, and JavaScript — no frameworks, no dependencies.
+A browser-based cybersecurity awareness quiz application built as a single self-contained HTML file. The project is designed to help users test and reinforce their knowledge across core cybersecurity domains through an interactive, timed quiz experience with a sleek cyberpunk-inspired interface.
+
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Quiz Categories](#quiz-categories)
+- [Difficulty Levels](#difficulty-levels)
+- [Scoring System](#scoring-system)
+- [Grading](#grading)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Author](#author)
+
+---
+
+## Overview
+
+CyberQuiz presents users with 10 randomly selected multiple-choice questions drawn from a pool of 30 questions per category. Each session is unique due to question shuffling. The application runs entirely in the browser with no backend, no dependencies to install, and no build tools required. Simply open the HTML file and start learning.
 
 ---
 
 ## Features
 
-### Design & Interface
-- **Brown & Beige Color Theme** — warm, rich tones with `Playfair Display` serif headings and `Source Code Pro` monospace output
-- **Fully Responsive** — works perfectly on desktop, tablet, and mobile
-- **Smooth Animations** — card reveals, slide-in transitions, and hover effects
-- **Click-to-Copy** — click any result value to instantly copy it to your clipboard
-- **Copy Toast Notification** — subtle feedback confirmation when a value is copied
-- **Calculation Counter** — tracks how many calculations you have run, saved via localStorage
+- Fully self-contained single-file application with no external dependencies
+- Six distinct cybersecurity topic categories, each with 30 curated questions
+- Three difficulty modes with different time limits and point values
+- Live countdown timer with visual color-coded warnings
+- Real-time score tracking throughout each session
+- Instant per-question feedback indicating correct or incorrect answers
+- Detailed post-quiz results screen with grade, score, accuracy, and breakdown
+- Answer review panel showing correct answers for every missed question
+- Retry and return-to-home options for repeated practice
+- Responsive layout compatible with desktop and mobile browsers
+- Cyberpunk-themed UI with animated grid background, scanline overlay, and glowing accents
 
-### IPv4 Calculator
-- Enter any valid IPv4 address with CIDR notation (0–32)
-- Interactive slider + number input, both stay in sync
-- **Results include:**
-  - Network address
-  - Broadcast address
-  - Subnet mask (dotted decimal)
-  - Wildcard mask
-  - First and last usable host addresses
-  - Total address count and usable host count
-  - Host utilization progress bar
-  - Full binary representation of IP and mask
-  - IP class (A / B / C / D / E)
-  - Network type (Private, Public, Loopback, Link-Local, etc.)
-  - CIDR notation and host bit count
+---
 
-### IPv6 Calculator
-- Accepts full or compressed IPv6 addresses (e.g. `2001:db8::1`)
-- Prefix length slider from 0 to 128
-- **Results include:**
-  - Expanded (full 128-bit) address
-  - Network prefix
-  - Prefix mask
-  - First and last addresses in the subnet
-  - Total address count (human-readable for large values)
-  - Binary representation (first 64 bits and last 64 bits)
-  - Address type classification (Global Unicast, Link-Local, Multicast, Loopback, etc.)
-  - Scope (Global, Link, Site, Interface, etc.)
-  - CIDR notation and host bit count
+## Quiz Categories
+
+The quiz covers the following six cybersecurity domains, each containing 30 questions:
+
+**Phishing and Social Engineering** — Covers tactics used by attackers to manipulate individuals into revealing sensitive information, including email phishing, spear phishing, pretexting, and vishing.
+
+**Passwords and Authentication** — Tests knowledge of password best practices, multi-factor authentication, password managers, credential stuffing, and account security hygiene.
+
+**Malware and Ransomware** — Focuses on types of malicious software, how ransomware operates, infection vectors, and appropriate response and prevention strategies.
+
+**Network Security** — Addresses concepts such as firewalls, VPNs, secure Wi-Fi practices, man-in-the-middle attacks, and network monitoring fundamentals.
+
+**Data Privacy and Compliance** — Covers data protection principles, privacy regulations such as GDPR, data handling responsibilities, and organizational compliance requirements.
+
+**Incident Response** — Examines the phases of incident response, containment and eradication procedures, forensic preservation, and post-incident analysis.
+
+---
+
+## Difficulty Levels
+
+| Difficulty | Time Per Question | Points Per Correct Answer | Questions Per Session |
+|------------|-------------------|---------------------------|----------------------|
+| Easy       | 30 seconds        | 10 points                 | 10                   |
+| Medium     | 20 seconds        | 20 points                 | 10                   |
+| Hard       | 15 seconds        | 30 points                 | 10                   |
+
+The timer bar changes color as time decreases, transitioning from blue to amber and finally to red during the final five seconds. Unanswered questions when the timer expires are counted as incorrect.
+
+---
+
+## Scoring System
+
+Points are awarded only for correct answers. Incorrect answers and timeouts receive no points. The live score is displayed throughout the quiz session and updated immediately after each answer is submitted.
+
+Maximum possible scores per difficulty level:
+
+- Easy: 100 points
+- Medium: 200 points
+- Hard: 300 points
+
+---
+
+## Grading
+
+At the end of each session, performance is evaluated based on accuracy percentage and assigned a grade and title:
+
+| Accuracy   | Grade | Title             |
+|------------|-------|-------------------|
+| 90% - 100% | A+    | Elite Operator    |
+| 80% - 89%  | A     | Security Expert   |
+| 70% - 79%  | B     | Strong Defender   |
+| 60% - 69%  | C     | Developing Skills |
+| Below 60%  | D     | Needs Improvement |
+
+The results screen displays the final score, total correct answers, total incorrect answers, overall accuracy, a grade-specific feedback message, and an expandable answer review panel.
+
+---
+
+## Tech Stack
+
+- HTML5
+- CSS3 with custom properties, animations, and responsive grid layout
+- Vanilla JavaScript with no frameworks or libraries
+- Google Fonts — Orbitron, Rajdhani, Share Tech Mono
 
 ---
 
 ## Getting Started
 
-### Run Locally
-1. Download or clone all four files into the same folder:
-   ```
-   index.html
-   styles.css
-   script.js
-   README.md
-   ```
-2. Open `index.html` in any modern browser
-3. No build step, no server, no dependencies needed
+No installation or build process is required.
 
-### Deploy to GitHub Pages
-1. Create a new GitHub repository (e.g. `subnet-calculator`)
-2. Upload all three files (`index.html`, `styles.css`, `script.js`)
-3. Go to **Settings → Pages**
-4. Set source to `main` branch, root folder
-5. Your site will be live at `https://your-username.github.io/subnet-calculator/`
+1. Download or clone the repository.
+2. Open `index.html` in any modern web browser.
+3. Select a quiz category from the available topic cards.
+4. Choose a difficulty level.
+5. Click the launch button to begin the quiz.
+
+The application works entirely offline after the initial load. An internet connection is only needed to fetch the Google Fonts stylesheet on first use; the quiz itself functions without it.
 
 ---
 
-## How to Use
-
-### IPv4
-1. Click the **IPv4** tab (active by default)
-2. Type an IPv4 address into the IP field (e.g. `192.168.1.0`)
-3. Drag the CIDR slider or type a prefix length (0–32)
-4. Click **Calculate Network** or press Enter
-5. Results appear in four cards below
-
-### IPv6
-1. Click the **IPv6** tab
-2. Type a valid IPv6 address (e.g. `2001:db8::` or `fe80::1`)
-3. Set the prefix length using the slider or number field (0–128)
-4. Click **Calculate Network** or press Enter
-5. Results appear in four cards below
-
-**Tip:** Click on any result value to copy it to your clipboard.
-
----
-
-## Example Inputs
-
-### IPv4 Examples
-| Address | CIDR | Description |
-|---------|------|-------------|
-| `192.168.1.0` | `/24` | Standard home/office network — 254 usable hosts |
-| `10.0.0.0` | `/8` | Large private Class A — 16+ million hosts |
-| `172.16.0.0` | `/12` | RFC 1918 private Class B range |
-| `192.168.10.0` | `/26` | Small subnet — 62 usable hosts |
-| `10.10.0.0` | `/30` | Point-to-point link — 2 usable hosts |
-
-### IPv6 Examples
-| Address | Prefix | Description |
-|---------|--------|-------------|
-| `2001:db8::` | `/32` | Documentation address (RFC 3849) |
-| `fe80::1` | `/64` | Link-local address |
-| `2001:db8:abcd::` | `/48` | Typical ISP allocation |
-| `::1` | `/128` | Loopback address |
-| `ff02::1` | `/128` | All-nodes multicast |
-
----
-
-## File Structure
+## Project Structure
 
 ```
-subnet-calculator/
-├── index.html    ← Full page structure, both IPv4 and IPv6 panels
-├── styles.css    ← Brown & beige theme, layout, responsive styles
-├── script.js     ← All calculation logic for IPv4 and IPv6
-└── README.md     ← This file
+cyberquiz/
+└── index.html       # Complete application — markup, styles, and logic in one file
 ```
 
----
+The entire application is contained within a single HTML file. The structure within the file is organized as follows:
 
-## Technology Stack
-
-- **HTML5** — semantic markup, accessible form elements
-- **CSS3** — custom properties, CSS Grid, Flexbox, keyframe animations
-- **JavaScript (ES6+)** — pure vanilla JS, no libraries or frameworks
-- **Google Fonts** — Playfair Display, Source Code Pro, Lato
-- **localStorage** — persists calculation counter across sessions
-- **Clipboard API** — click-to-copy on all result values
-
----
-
-## Customization
-
-### Change Accent Color
-Open `styles.css` and edit the root variables:
-```css
-:root {
-  --brown-700: #5c3317;  /* button background */
-  --brown-600: #7a4520;  /* hover state */
-  --amber:     #c97d2a;  /* progress bar */
-}
-```
----
-
-## Browser Support
-
-| Browser | Support |
-|---------|---------|
-| Chrome / Edge (latest) | ✅ Full |
-| Firefox (latest) | ✅ Full |
-| Safari (latest) | ✅ Full |
-| iOS Safari | ✅ Full |
-| Chrome Mobile | ✅ Full |
-
-The Clipboard API (used for click-to-copy) requires either a secure context (HTTPS) or localhost. Everything else works on plain HTTP as well.
-
----
-
-## Troubleshooting
-
-**Copy not working?**
-The Clipboard API needs HTTPS or localhost. If you open the file directly via `file://`, copy may not work in some browsers. Serve it locally with a simple HTTP server or deploy to GitHub Pages.
-
-**Slider and number input out of sync?**
-Both inputs call `syncV4()` or `syncV6()` on every change, so they should always stay in sync. If you notice a discrepancy, refresh the page.
-
-**IPv6 address not recognized?**
-Make sure you are using valid colon-hex notation. Compressed forms like `::1`, `fe80::`, and `2001:db8::abcd` are all supported. Mixed IPv4/IPv6 notation (e.g. `::ffff:192.168.1.1`) is recognized as IPv4-Mapped.
-
----
-
-## Planned Additions
-
-- [ ] VLSM (Variable Length Subnet Masking) tool
-- [ ] Subnet split / divide calculator
-- [ ] Calculation history panel
-- [ ] Export results to PDF or CSV
-- [ ] IPv6 address type reference guide
-- [ ] Offline support via Service Worker
+- Head section with meta tags and Google Fonts import
+- Embedded CSS covering theming, layout, animations, and responsive breakpoints
+- HTML body with three screen containers: home, quiz, and results
+- Embedded JavaScript containing question data, quiz state management, timer logic, scoring, and result rendering
 
 ---
 
 ## Author
 
 **ScrambleR**
-- Cisco NetAcad Network Basics Certified
-- GitHub: [https://github.com/ScrambleR-H]
-- LinkedIn: [www.linkedin.com/in/scrambler-hhh-7826b13a6]
+
+GitHub: [https://github.com/ScrambleR-H]
+LinkedIn: [www.linkedin.com/in/scrambler-hhh-7826b13a6]
 
 ---
 
 ## License
 
-Open source — free to use, modify, and share for personal and commercial projects.
+This project is open source and available for personal and educational use. Attribution is appreciated.
